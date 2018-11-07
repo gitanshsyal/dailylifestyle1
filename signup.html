@@ -1,0 +1,140 @@
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script>
+  function submit1()
+  {
+  a=document.getElementById("fname");
+  b=document.getElementById("lname");
+  c=document.getElementById("ename");
+  d=document.getElementById("pname");
+  e=document.getElementById("rname");
+  f=document.getElementById("number");
+  g=document.getElementById("date");
+  h=document.getElementById("month");
+  i=document.getElementById("year");
+  var radios = document.getElementsByName('gender');
+var flag="false";
+for (var i = 0, length = radios.length; i < length; i++) {
+
+    if (radios[i].checked) {
+       flag="true";
+        value=radios[i].value;
+        break;
+    }
+}
+ if (a.value=="")
+  {
+  alert("enter your first name");
+  }
+  else if (b.value=="")
+  {alert("enter your last name");}
+  else if (c.value=="")
+  {
+  alert("enter your email address");}
+  else if (d.value=="")
+  {
+  alert("your password is missing")
+  }
+  else if (e.value=="")
+  {alert("Please confirm your password");
+  }
+  else if (g.selectedIndex==0)
+  {
+  alert("please enter the date");}
+  else if (h.selectedIndex==0)
+  {
+  alert("please enter the month");
+  }
+  else if(i.selectedIndex==0)
+  {
+  alert("please enter the date");}
+  else if(flag=="false")
+{
+alert("select gender");
+}
+  else if (f.value=="")
+  {
+  alert("Please enter your Phone number.")}
+  
+  }
+  </script>
+<style>
+#id1
+  {
+ background-image: url('last.jpg')}
+</style>
+  </head>
+  <body>
+  
+  <div class="container" id="id1">
+  <div class="row">
+  <div class="col-md-12 text-center">
+  <img src="LOGO1.png" height="200px" width="200px">
+  </div></div>
+  <div class="row">
+  <div class="col-md-12 text-center">
+  <h1 style="color:black;font-size:70px"><i>Create your Account</i></h1>
+  </div></div>
+  <div class="row" style="margin-top:10px">
+  <div class="col-md-12 text-center">
+  <i style="font-size:20px;color:black">Enter your name</i><br>  <input style="height:40px;width:260px;margin-left:10px;margin-top:5px;"type="text" id="fname" name="fname" placeholder="your first name" value=""/>
+ <input style="height:40px;width:260px;margin-left:10px;margin-top:5px;"type="text" id="lname" name="lname" placeholder="your last name" value=""/>
+  </div>
+  <div class="row" style="margin-top:10px">
+  <div class="col-md-12 text-center">
+  <i style="font-size:20px;color:black">Enter your Email Id</i> <br> <input style="height:40px;margin-top:5px"type="text" id="ename" name="ename" placeholder="choose your email address" size="45"value=""/>
+  </div>
+  
+  <div class="col-md-12 text-center" >
+  <i style="font-size:20px;color:black">Choose your Password</i>  <br><input style="height:40px;margin-top:5px;"type="password" id="pname" name="pname" placeholder="choose your Password" size="45"value=""/>
+  </div>
+  <div class="col-md-12 text-center">
+  <i style="font-size:20px;color:black">Retype your  Password </i> <br> <input style="height:40px;margin-top:5px;"type="password" id="rname" name="rname" placeholder="Confirm your Password" size="45"value=""/>
+  </div></div>
+  <div class="row">
+  <div class="col-md-12 text-center">
+  <i style="font-size:20px;color:black">Date Of Birth</i><br>  
+  <i style="margin-left:35px;font-size:20px;color:black">Date</i><select style="width=150px;margin-left:10px;margin-top:5px;" id="date">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  </select>
+  
+  <i style="font-size:20px;color:black;">Month</i><select style="width=150px;margin-left:10px" id="month">
+ <option value="1">1</option>
+  <option value="2">2</option>
+ </select>
+ 
+
+  <i style="font-size:20px;color:black;">Year</i><select style="width=150px;margin-left:10px" id="year">
+ <option value="1">1</option>
+  <option value="2">2</option>
+ </select>
+ </div>
+ </div>
+ <div class="row">
+ <div class="col-md-12 text-center">
+ <i style="font-size:20px;color:black;margin-top:5px">Gender<br></i><input style="margin-left:30px;margin-top:5px" type="radio" id="male" name="gender" value="male"><i style="color:black;margin-left:5px;font-size:20px">male</i>
+ <input type="radio" id="female" name="gender" value="female"><i style="color:black;margin-left:5px;margin-top:5px;font-size:20px;margin-top:5px">female</i>
+ </div>
+  </div>
+  <div class="row">
+  <div class="col-md-12 text-center">
+  <i style="font-size:20px;color:black;margin-top:5px">Enter your Mobile number</i><br><input style="height:40px;margin-top:5px" type="text" id="number" name="number" size="46"placeholder="enter your mobile" value=""/>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-md-12 text-center">
+  <input style="background:green;color:white;height:40px;margin-top:5px" type="submit" id="submit" name="submit" onclick="submit1()" value="Create your Account">
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </body>
+</html>
